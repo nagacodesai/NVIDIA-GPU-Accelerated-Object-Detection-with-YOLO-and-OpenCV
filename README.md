@@ -77,7 +77,7 @@ This project demonstrates real-time object detection using the **YOLOv8** model 
 - Ensures the weights are organized in the designated directory.
 - Returns the YOLO model.
 
-### **2. `dedectImage(imgFile, model)`**
+### **2. `detectImage(imgFile, model)`**
 - Detects objects in the given image using the YOLO model.
 - Saves the annotated image with bounding boxes and labels.
 - Displays the annotated image in a resizable OpenCV window.
