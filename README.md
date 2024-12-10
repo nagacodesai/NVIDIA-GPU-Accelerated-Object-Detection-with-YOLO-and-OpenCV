@@ -35,6 +35,56 @@ Work in Progress  - ETA end of Dec, 2024
    - OpenCV
    - NumPy
 
+## **What is YOLO?**
+YOLO (You Only Look Once) is a real-time object detection algorithm that performs detection in a single pass through the neural network. Known for its balance between speed and accuracy, YOLO is widely used in applications like autonomous vehicles, surveillance, and robotics.
+
+---
+
+## **What is YOLOv8?**
+YOLOv8 is the latest version developed by **Ultralytics** and released in 2023. It extends the capabilities of the YOLO family by supporting multiple tasks like object detection, instance segmentation, and pose estimation. Designed for usability and deployment versatility, YOLOv8 offers seamless integration with various deployment platforms.
+
+| **Feature**        | **Details**                                                                 |
+|---------------------|-----------------------------------------------------------------------------|
+| **Developer**       | Ultralytics                                                                |
+| **Release Year**    | 2023                                                                       |
+| **Key Advancements**| Supports object detection, segmentation, and pose estimation.              |
+| **Export Options**  | Easily exportable to ONNX, CoreML, TensorRT, and other formats.            |
+| **Flexibility**     | Optimized for real-time applications, edge devices, and cloud deployments. |
+
+---
+
+## **YOLOv8 Variants**
+YOLOv8 offers multiple variants to cater to different performance and hardware requirements:
+
+| **Variant**       | **Purpose**                                                                                  | **Description**                                                                                                   |
+|-------------------|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| **YOLOv8n**       | Nano                                                                                         | Smallest and fastest variant, designed for low-resource environments and edge devices.                           |
+| **YOLOv8s**       | Small                                                                                        | Balanced between speed and accuracy, suitable for real-time applications on moderate hardware.                   |
+| **YOLOv8m**       | Medium                                                                                       | Better accuracy while maintaining reasonable speed. Ideal for general-purpose tasks.                             |
+| **YOLOv8l**       | Large                                                                                        | High accuracy, suitable for applications where performance is prioritized over speed.                            |
+| **YOLOv8x**       | Extra Large                                                                                  | Largest model in the family, providing the best accuracy for demanding tasks with sufficient computational power. |
+
+---
+
+## **Purpose of YOLOv8**
+YOLOv8 is versatile and designed for a variety of applications:
+
+| **Application**               | **Details**                                                                                           |
+|--------------------------------|-------------------------------------------------------------------------------------------------------|
+| **Object Detection**           | Identifies objects in an image or video and draws bounding boxes around them.                       |
+| **Instance Segmentation**      | Detects objects and masks their shapes in images or videos.                                         |
+| **Pose Estimation**            | Estimates human or object poses by identifying key points like joints or corners.                   |
+| **Edge Computing**             | Variants like YOLOv8n are optimized for resource-constrained environments such as IoT devices.      |
+| **Cloud and Server Deployment**| Supports large-scale deployments with high-performance models like YOLOv8l and YOLOv8x.             |
+
+---
+
+## **Advantages of YOLOv8**
+- **Versatility:** Supports detection, segmentation, and pose estimation tasks in one unified model.
+- **Ease of Use:** Includes pre-trained models and export capabilities for deployment to ONNX, CoreML, TensorRT, and more.
+- **Performance Scaling:** Offers a range of variants to balance speed and accuracy for different hardware environments.
+
+
 ### **Installation Steps**
 1. Clone this repository:
    ```bash
