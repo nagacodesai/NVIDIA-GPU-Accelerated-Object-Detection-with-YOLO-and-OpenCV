@@ -3,7 +3,7 @@
 
 ## **Synopsis**
 This project demonstrates real-time object detection using the **YOLOv8** model integrated with **OpenCV**. The system automatically manages YOLO weights, downloads them if necessary, and performs object detection on input images. The results are saved and displayed in a user-friendly, resizable window. The project is GPU-accelerated using NVIDIA's CUDA for high performance.
-
+Work in Progress  - ETA end of Dec, 2024
 ---
 
 ## **Key Features**
@@ -37,8 +37,8 @@ This project demonstrates real-time object detection using the **YOLOv8** model 
 ### **Installation Steps**
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/yolo-object-detection.git
-   cd yolo-object-detection
+   git clone https://github.com/nagacodesai/NVIDIA-GPU-Accelerated-Object-Detection-with-YOLO-and-OpenCV.git
+   cd NVIDIA-GPU-Accelerated-Object-Detection-with-YOLO-and-OpenCV
    ```
 
 2. Install the required Python libraries:
