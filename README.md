@@ -101,14 +101,6 @@ This project is open-source and licensed under the MIT License. Feel free to use
 
 ---
 
-## **Contributions**
-Contributions are welcome! If you'd like to improve this project or add new features:
-1. Fork the repository.
-2. Create a feature branch.
-3. Submit a pull request.
-
----
-
 ## **Contact**
 For any queries, suggestions, or collaborations, feel free to contact:
 - **Name:** [Nagamohan Kumar Palakurthy]
