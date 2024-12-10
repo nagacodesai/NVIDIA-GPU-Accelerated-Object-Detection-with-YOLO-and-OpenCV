@@ -1,89 +1,64 @@
 
-# NVIDIA GPU Accelerated Object Detection with YOLO and OpenCV
+# **NVIDIA GPU Accelerated Object Detection with YOLO and OpenCV**
 
 ## **Synopsis**
-This project demonstrates real-time object detection using the **YOLOv3** model integrated with **OpenCV** and accelerated by **CUDA** on an **NVIDIA GPU**. The goal is to leverage GPU processing to achieve high-speed, efficient detection of objects in images and video streams. The project provides a foundational implementation that can be extended to various real-world applications such as surveillance, traffic monitoring, and smart automation.
+This project demonstrates real-time object detection using the **YOLOv8** model integrated with **OpenCV**. The system automatically manages YOLO weights, downloads them if necessary, and performs object detection on input images. The results are saved and displayed in a user-friendly, resizable window. The project is GPU-accelerated using NVIDIA's CUDA for high performance.
 
 ---
 
 ## **Key Features**
-- **Object Detection with YOLO:** Utilizes the YOLOv3 model trained on the COCO dataset to identify 80 object categories.
-- **GPU Acceleration:** Achieves high performance using NVIDIA CUDA for parallel computation.
-- **Flexible Input Support:** Supports image files, video streams, and live camera feeds.
-- **Customizable Detection:** Adjustable confidence thresholds and detection parameters.
-- **Extensible:** Modular design for easy integration into larger projects.
+- **Automatic Weight Management:**
+  - Downloads YOLOv8 weights if not available locally and organizes them in a structured directory.
+- **Object Detection:**
+  - Uses the YOLOv8 model for object detection in images.
+- **Friendly Image Display:**
+  - Annotated results are saved and displayed in a resizable OpenCV window.
+- **Modular Design:**
+  - Reusable functions for weight management and image processing.
 
 ---
 
 ## **Technologies Used**
-- **YOLOv3:** Pre-trained deep learning model for fast object detection.
-- **OpenCV:** For image processing, video capture, and drawing results.
-- **CUDA and NVIDIA GPUs:** For accelerating the object detection process.
+- **YOLOv8:** A state-of-the-art object detection model by Ultralytics.
+- **OpenCV:** For image processing and result display.
 - **Python:** Programming language used to integrate all components.
 
 ---
 
 ## **Setup and Installation**
 ### **Prerequisites**
-1. **Python 3.x** installed on your system.
+1. **Python 3.8 or later** installed on your system.
 2. **NVIDIA GPU** with CUDA support and the CUDA toolkit installed.
-3. Required libraries:
-   - OpenCV (`opencv-python`, `opencv-contrib-python`)
+3. Required Python libraries:
+   - Ultralytics YOLO
+   - OpenCV
    - NumPy
-   - Matplotlib (optional, for visualizations)
 
 ### **Installation Steps**
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/nvidia-yolo-opencv.git
-   cd nvidia-yolo-opencv
+   git clone https://github.com/yourusername/yolo-object-detection.git
+   cd yolo-object-detection
    ```
 
 2. Install the required Python libraries:
    ```bash
-   pip install opencv-python opencv-contrib-python numpy
+   pip install ultralytics opencv-python numpy
    ```
-
-3. Download YOLOv3 files:
-   - `yolov3.weights`: [Download Here](https://pjreddie.com/media/files/yolov3.weights)
-   - `yolov3.cfg`: [Download Here](https://github.com/pjreddie/darknet/blob/master/cfg/yolov3.cfg)
-   - `coco.names`: [Download Here](https://github.com/pjreddie/darknet/blob/master/data/coco.names)
-   Save these files in the `model` directory.
 
 ---
 
 ## **Usage**
-1. **Run the Object Detection Script**
-   - Replace `input_image.jpg` with your image file.
-   ```bash
-   python object_detection.py --image input_image.jpg
-   ```
+1. **Run the Script**
+   - Replace `IMG_2496.jpeg` with your input image file:
+     ```bash
+     python detect_image.py
+     ```
 
-2. **Real-Time Detection with Webcam**
-   ```bash
-   python object_detection.py --webcam
-   ```
-
-3. **Video Input**
-   - Replace `input_video.mp4` with your video file.
-   ```bash
-   python object_detection.py --video input_video.mp4
-   ```
-
----
-
-## **Configuration**
-You can adjust the following parameters in the `object_detection.py` file:
-- **Confidence Threshold:**
-  Controls the minimum confidence for object detection.
-  ```python
-  confidence_threshold = 0.5
-  ```
-- **NMS Threshold:**
-  Adjusts the non-max suppression threshold.
-  ```python
-  nms_threshold = 0.4
-  ```
+2. **Process Workflow:**
+   - **Weights Management:** The script checks for the existence of YOLOv8 weights and downloads them if unavailable.
+   - **Object Detection:** The script detects objects in the input image and saves an annotated version.
+   - **Display Results:** The annotated image is displayed in a resizable OpenCV window.
 
 ---
 
@@ -96,13 +71,35 @@ You can adjust the following parameters in the `object_detection.py` file:
 
 ---
 
+## **Functions Overview**
+### **1. `checkWeightsReturnModel()`**
+- Checks for existing YOLO weights or downloads them if missing.
+- Ensures the weights are organized in the designated directory.
+- Returns the YOLO model.
+
+### **2. `dedectImage(imgFile, model)`**
+- Detects objects in the given image using the YOLO model.
+- Saves the annotated image with bounding boxes and labels.
+- Displays the annotated image in a resizable OpenCV window.
+
+---
+
+## **Configuration**
+- **Input Image:** Modify the `imgFle` variable in the script to change the input image.
+- **Weights Path:** Update the `weights_dir` variable to change the directory for storing YOLO weights.
+
+---
+
 ## **License**
 This project is open-source and licensed under the MIT License. Feel free to use, modify, and distribute.
 
 ---
 
+
+---
+
 ## **Contact**
 For any queries, suggestions, or collaborations, feel free to contact:
-- **Name:** [Nagamohan Kumar Palakurthy]
+- **Name:** Nagamohan Kumar Palakurthy
 - **Email:** nagaCodesAI@gmail.com
 - **GitHub:** [Your GitHub Profile](https://github.com/nagacodesai)
