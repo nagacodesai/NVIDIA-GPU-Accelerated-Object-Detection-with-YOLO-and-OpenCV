@@ -102,4 +102,4 @@ This project is open-source and licensed under the MIT License. Feel free to use
 For any queries, suggestions, or collaborations, feel free to contact:
 - **Name:** Nagamohan Kumar Palakurthy
 - **Email:** nagaCodesAI@gmail.com
-- **GitHub:** [Your GitHub Profile](https://github.com/nagacodesai)
+- **GitHub:** [Nagamohan Kumar Palakurthy](https://github.com/nagacodesai)
