@@ -75,6 +75,7 @@ This project demonstrates real-time object detection using the **YOLOv8** model 
 ### **1. `checkWeightsReturnModel()`**
 - Checks for existing YOLO weights or downloads them if missing.
 - Ensures the weights are organized in the designated directory.
+- Determine device: Use CUDA if available, otherwise CPU.device = 'cuda' if torch.cuda.is_available() else 'cpu'
 - Returns the YOLO model.
 
 ### **2. `detectImage(imgFile, model)`**
